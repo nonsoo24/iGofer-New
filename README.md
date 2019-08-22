@@ -1,6 +1,3 @@
-
-# igofer-new
-
 ## Project setup
 ```
 npm install

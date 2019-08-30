@@ -39,11 +39,13 @@
     </div>
 </template>
 
-<style scoped>nav {
-    left: 0px;
-    top: 0px;
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+<style scoped>
+    nav {
+        left: 0px;
+        top: 0px;
+        background-color: #FFFFFF;
+        height: 70px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
 
     .logo {
@@ -65,7 +67,7 @@
         background: #F26132
     }
 
-    #sign-up{
+    #sign-up {
         color: #FDFDFD;
     }
 
@@ -75,4 +77,4 @@
         box-sizing: border-box;
     }
 
-</style>
+    </style>

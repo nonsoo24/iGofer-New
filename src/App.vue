@@ -1,16 +1,22 @@
 <template>
   <div id="app">
     <app-header />
+    <home-content />
+    <app-footer />
   </div>
 </template>
 
 <script>
 import Header from './components/Shared/Header.vue';
+import HomeContent from './components/HomeContent.vue';
+import Footer from './components/Shared/Footer.vue'
 export default {
-  
+
   name: 'app',
   components: {
-    'app-header': Header
+    'app-header': Header,
+    'home-content': HomeContent,
+    'app-footer': Footer
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header>
+        <header fixed-top>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <svg class="logo" width="115" height="45" viewBox="0 0 115 45" fill="none" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -24,20 +24,28 @@
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sign In</a>
+                        <a id="sign-in" class="nav-link button" href="#">Sign In</a>
                     </li>
                     <li class="nav-item">
-                        <a id="sign-up" class="nav-link" href="#">Sign Up</a>
+                        <a id="sign-up" class="nav-link button" href="#">Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Become a Worker</a>
+                        <a id="worker" class="nav-link button" href="#">Become a Worker</a>
                     </li>
                 </ul>
             </div>
         </nav>
         </header>
+
     </div>
 </template>
+
+<script>
+
+export default {
+
+}
+</script>
 
 <style scoped>
     nav {
@@ -48,12 +56,13 @@
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
 
+
     .logo {
-        left: 126px;
+        margin-left: 120px;
         top: 12px;
     }
 
-    .nav-link {
+    li {
         font-family: Poppins;
         font-style: normal;
         font-weight: 600;
@@ -63,8 +72,10 @@
         /* margin-right: 25px; */
     }
 
-    li:nth-child(2) {
-        background: #F26132
+    ul li:nth-child(2) {
+        background: #F26132;
+        margin: 0px 10px;
+        padding: 0px 15px
     }
 
     #sign-up {
@@ -75,6 +86,16 @@
         background: #FFFFFF;
         border: 1px solid #F26132;
         box-sizing: border-box;
+        padding: 0px 15px;
     }
+
+     #worker{
+        color: #F26132;
+     }
+
+     #sign-in{
+         color: #F26132;
+         /* font-size: 18px; */
+     }
 
     </style>

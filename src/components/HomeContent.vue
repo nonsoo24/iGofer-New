@@ -334,6 +334,8 @@ h6+p {
 
 [how-it-works] svg {
     background: rgba(242, 97, 50, 0.12);
+     background-position: center;
+  background-repeat: no-repeat;
     border-radius: 50%;
     display: block;
     margin: center;

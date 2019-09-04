@@ -75,11 +75,11 @@
             </div>
         </section>
 
-        <section class="container mt-5">
+        <section class="container mt-5" how-it-works>
             <h4>How it works</h4>
             <div class="row">
                 <div class="col-md-4">
-                    <svg width="67" height="74" viewBox="0 0 67 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="120" height="120" viewBox="0 0 67 74" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M49.2944 48.6201V67.4051C49.2944 68.9989 47.994 70.2951 46.3947 70.2951H5.7993C4.20017 70.2951 2.89956 68.999 2.89956 67.4051V13.9401C2.89956 12.3463 4.2 11.05 5.7993 11.05H21.7476V8.16016H5.7993C2.60104 8.16016 0 10.7525 0 13.9401V67.4051C0 70.5928 2.60104 73.1852 5.7993 73.1852H46.3947C49.5931 73.1852 52.194 70.5928 52.194 67.4052V48.6201H49.2944Z"
                             fill="#F26132" />
@@ -115,7 +115,7 @@
                     <p>Tell us what you need done, when and where by filling out the form</p>
                 </div>
                 <div class="col-md-4">
-                    <svg width="66" height="70" viewBox="0 0 66 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="120" height="120" viewBox="0 0 66 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M17.3724 39.1454L15.0391 43.8121C14.8585 44.1738 14.8779 44.6033 15.0904 44.9468C15.3034 45.2909 15.6788 45.5 16.0833 45.5H19.5833V43.1666H17.9711L19.4665 40.1879L17.3724 39.1454Z"
                             fill="#F26132" />
@@ -145,7 +145,7 @@
                     <p>Get sent an iGofer verified worker to handle your work</p>
                 </div>
                 <div class="col-md-4">
-                    <svg width="54" height="70" viewBox="0 0 54 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="120" height="120" viewBox="0 0 54 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M35.7733 38.0085V30.3333H33.44V48.4983L31.1066 46.1545V29.1667H28.7733V43.8118L26.3233 41.349C24.4765 39.4888 21.5432 39.2694 19.44 40.8333H10.1066V43.1667H17.6311C17.3869 43.7827 17.2606 44.4389 17.258 45.1027C17.258 45.2375 17.2872 45.3673 17.298 45.5H10.1066V47.8333H18.04C18.2573 48.2049 18.5189 48.5482 18.8193 48.8565L24.7903 54.8333H21.7733V57.1667H27.1236L28.2693 58.3123C27.9386 58.695 27.6276 59.0922 27.336 59.5H3.10665V15.1667H22.94V12.8333H3.10665V11.6667C3.10665 10.3778 4.15111 9.33333 5.43998 9.33333H24.1066V7H5.43998C2.86282 7 0.773315 9.0895 0.773315 11.6667V63C0.773315 65.5772 2.86282 67.6667 5.43998 67.6667H24.384C24.354 68.0727 24.3295 68.4833 24.3295 68.8902V70H26.6628V68.8902C26.6535 65.2196 28.1127 61.6965 30.7158 59.108C31.1708 58.6524 31.1708 57.9139 30.7158 57.4583L20.4631 47.2065C19.3014 46.0448 19.3014 44.1607 20.4631 42.9987C21.6418 41.8775 23.4918 41.8775 24.6699 42.9987L36.1143 54.4915L37.7657 52.8442L35.7733 50.841V41.2743L38.5173 43.9577C40.5027 45.9322 41.6154 48.6194 41.6066 51.4202V70H43.94V51.4202C43.949 47.997 42.5866 44.7131 40.1574 42.3019L35.7733 38.0085ZM5.43998 65.3333C4.15111 65.3333 3.10665 64.2889 3.10665 63V61.8333H25.9476C25.4098 62.949 25.0026 64.1232 24.7366 65.3333H5.43998Z"
                             fill="#F26132" />
@@ -173,8 +173,23 @@
         </section>
 
         <section class="container mt-5 mb-5">
-            <h4>Testimonials</h4>
+            <h4 class="mb-3">Testimonials</h4>
             <p>See what people are saying about us.</p>
+            <div class="testimonial">
+                <img src="..\img\customer1.png" class="img-fluid d-block pt-5" alt="">
+
+                <svg width="110" height="17" viewBox="0 0 110 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z" fill="#F2A632"/>
+<path d="M32 0L34.0206 6.21885H40.5595L35.2694 10.0623L37.2901 16.2812L32 12.4377L26.7099 16.2812L28.7306 10.0623L23.4405 6.21885H29.9794L32 0Z" fill="#F2A632"/>
+<path d="M55 0L57.0206 6.21885H63.5595L58.2694 10.0623L60.2901 16.2812L55 12.4377L49.7099 16.2812L51.7306 10.0623L46.4405 6.21885H52.9794L55 0Z" fill="#F2A632"/>
+<path d="M78 0L80.0206 6.21885H86.5595L81.2694 10.0623L83.2901 16.2812L78 12.4377L72.7099 16.2812L74.7306 10.0623L69.4405 6.21885H75.9794L78 0Z" fill="#F2A632"/>
+<path d="M101 0L103.021 6.21885H109.56L104.269 10.0623L106.29 16.2812L101 12.4377L95.7099 16.2812L97.7306 10.0623L92.4405 6.21885H98.9794L101 0Z" fill="#DADADA"/>
+</svg>
+<p class="review pt-3">Using iGofer to have a new bookcase built was a great choice. Rick did a wonderful work with a job <br />  that was much bigger than we anticipated</p>
+<p class="text-dark font-weight-bolder">Jane Doe, Product Designer at Licapnet</p>
+
+
+            </div>
         </section>
     </div>
 </template>
@@ -199,7 +214,7 @@ h2 {
     padding-top: 140px;
 }
 
-h6 {
+/* h6 {
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
@@ -208,7 +223,7 @@ h6 {
     color: #000000;
     text-align: left;
 
-}
+} */
 
 .word {
     font-family: Poppins;
@@ -233,6 +248,12 @@ button {
     padding: 15px;
 }
 
+button:hover {
+    background: #fff;
+    border: 2px solid #F26132;
+    color: #F26132;
+}
+
 /* advert */
 .advert {
     background: #FFFFFF;
@@ -249,8 +270,10 @@ h4 {
     line-height: 45px;
     color: #000000;
     text-align: left;
+    margin-bottom: 4rem;
 }
-h4 + p {
+
+h4+p {
     font-family: Poppins;
     font-style: normal;
     font-weight: 300;
@@ -259,9 +282,61 @@ h4 + p {
     text-align: left;
 
 }
-section > img{
+
+section>img {
     width: 10px;
     height: 10px;
 }
 
+/* how it works */
+h6 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+    text-align: left;
+    margin-top: 3rem;
+}
+
+h6+p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 1rem;
+
+}
+
+[how-it-works] svg {
+    background: rgba(242, 97, 50, 0.12);
+    border-radius: 50%;
+    display: block;
+    margin: center;
+    padding: 1.4em
+}
+
+/* testimonial */
+.testimonial {
+    background: #FAFAFA;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    height: 350px;
+}
+
+img[src*="customer"]{
+    margin: auto;
+    padding: 1.2em;
+}
+ .review{
+font-family: Poppins;
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 24px;
+text-align: center
+ }
 </style>

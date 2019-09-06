@@ -1,5 +1,6 @@
 <template>
     <div>
+        <section landing-content>
         <div class="landing-picture">
             <h2>A convenient and affordable way to get things done</h2>
             <p class="word pb-3">Choose from a pool of iGofer trained and verified professionals to <br> get your job
@@ -7,6 +8,7 @@
             </p>
             <button class="btn px-5 rounded">Hire a Worker</button>
         </div>
+        </section>
 
         <section class="mb-5">
             <div class="advert d-flex">
@@ -27,47 +29,47 @@
             <p class="mb-5">Choose from a pool iGofer trained and verified workers to help with breaking the bank.</p>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\carpentry.png" alt>
+                    <img src="..\img\services\carpentry.png" alt>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\painting.png" alt>
+                    <img src="..\img\services\painting.png" alt>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\plumbing.png" alt>
+                    <img src="..\img\services\plumbing.png" alt>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\roofing.png" alt>
+                    <img src="..\img\services\roofing.png" alt>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\bricklaying.png" alt>
+                    <img src="..\img\services\bricklaying.png" alt>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\tiling.png" alt>
+                    <img src="..\img\services\tiling.png" alt>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\cleaning.png" alt>
+                    <img src="..\img\services\cleaning.png" alt>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\electrical.png" alt>
+                    <img src="..\img\services\electrical.png" alt>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\security.png" alt>
+                    <img src="..\img\services\security.png" alt>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\catering.png" alt>
+                    <img src="..\img\services\catering.png" alt>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\academic.png" alt>
+                    <img src="..\img\services\academic.png" alt>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
@@ -168,14 +170,14 @@
                             fill="#F26132"></path>
                     </svg>
                     <h6>Make payment </h6>
-                    <p>After the job has been completed to your satisfaction, pay securely through igofer.</p>
+                    <p>Pay securely after the job has been completed to your satisfaction.</p>
                 </div>
             </div>
         </section>
 
         <section class="container" testimonial-section>
             <h4 class="mb-3">Testimonials</h4>
-            <p>See what people are saying about us.</p>
+            <p>See what our customers are saying about us.</p>
             <div class="testimonial">
                 <img class="img-fluid d-block pt-5" src="..\img\customer1.png" alt>
 
@@ -203,10 +205,26 @@
 
             </div>
         </section>
+
+         <app-footer />
     </div>
 </template>
 
+<script>
+import Footer from './Shared/Footer.vue'
+export default {
+
+  components: {
+    'app-footer': Footer
+  }
+}
+</script>
+
 <style scoped>
+
+[landing-content]{
+    margin-top: 70px;
+}
 
 /* landing picture */
 .landing-picture {

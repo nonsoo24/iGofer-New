@@ -12,27 +12,27 @@
                     <form>
                     <div class="form-group">
                             <label for="full-name">Full name</label>
-                            <input type="text" class="form-control" id="full-name"
+                            <input type="text" class="form-control form-control-sm" id="full-name"
                                 aria-describedby="fullnameHelp">
                         </div>
                         <div class="form-group">
                             <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email"
+                            <input type="email" class="form-control form-control-sm" id="email"
                                 aria-describedby="emailHelp">
                         </div>
 
                         <div class="form-group">
                             <label for="phone-number">Phone Number</label>
-                            <input type="number" class="form-control" id="phone-number">
+                            <input type="number" class="form-control form-control-sm" id="phone-number">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password">
+                            <input type="password" class="form-control form-control-sm" id="password">
                         </div>
                         <div class="form-group">
                             <label for="confirm-password">Confirm Password</label>
-                            <input type="password" class="form-control" id="confirm-password">
+                            <input type="password" class="form-control form-control-sm" id="confirm-password">
                         </div>
                         <!-- <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -100,9 +100,8 @@ h5 {
 }
 
 .signin-details {
-    height: 700px;
-    margin: 5.625em 0em  0em 0em;
-    /* margin-bottom: 2.2em; */
+    height: 570px;
+    margin: 5.625em 0em  2.2em 0em;
     padding-top: 15px;
     background: #FFFFFF;
 }
@@ -114,7 +113,7 @@ input {
 }
 
 h5 + p{
-margin: 0px 0px 30px 23px;
+margin: 0px 0px 10px 23px;
 text-align: left;
 font-family: 'Poppins', sans-serif;
 font-style: normal;
@@ -153,6 +152,7 @@ font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 21px;
+margin-bottom: 0px;
 color: #000000;
 }
 </style>

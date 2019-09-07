@@ -25,7 +25,7 @@
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li> -->
                      <router-link id="sign-in" class="nav-link" to="/SignIn" tag="li" active-class="active" exact>Sign In</router-link>
-                    <router-link id="sign-up" class="nav-link" to="" tag="li" active-class="active">Sign Up</router-link>
+                    <router-link id="sign-up" class="nav-link" to="/SignUp" tag="li" active-class="active">Sign Up</router-link>
                     <router-link id="worker" class="nav-link" to="" tag="li" active-class="active">Become a Worker</router-link>
                 </ul>
             </div>

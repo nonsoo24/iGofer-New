@@ -44,7 +44,7 @@ footer{
 }
 
 h5{
-font-family: Poppins;
+font-family: 'Poppins', sans-serif;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
@@ -54,7 +54,7 @@ margin-top: 4em;
 }
 
 li a{
-font-family: Poppins;
+font-family: 'Poppins', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 14px;
@@ -66,7 +66,7 @@ color: #FFFFFF;
 }
 
 p{
-font-family: Poppins;
+font-family: 'Poppins', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 14px;

@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <img class="img-fluid" src="..\img\services\environmental.png" alt>
+                    <img src="..\img\services\environmental.png" alt>
                 </div>
             </div>
         </section>
@@ -256,9 +256,9 @@ h2 {
 } */
 
 .word {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 100;
     font-size: 18px;
     line-height: 27px;
     text-align: center;
@@ -293,7 +293,7 @@ button:hover {
 
 /* our services */
 h4 {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -304,7 +304,7 @@ h4 {
 }
 
 h4+p {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -313,19 +313,20 @@ h4+p {
 
 }
 
-/* img[src*="services"]{
-    max-width: 255px;
+img[src*="services"]{
+    /* max-width: 255px;
     height: 137.91px;
-} */
-
-section>img {
-    width: 10px;
-    height: 10px;
+     */
+     margin-top: 20px;
 }
+
+/* [services] > img {
+   margin-top: 20px;
+} */
 
 /* how it works */
 h6 {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -336,7 +337,7 @@ h6 {
 }
 
 h6+p {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -375,7 +376,7 @@ img[src*="customer"] {
 }
 
 .review {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;

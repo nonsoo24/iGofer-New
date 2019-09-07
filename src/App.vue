@@ -29,4 +29,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 </style>

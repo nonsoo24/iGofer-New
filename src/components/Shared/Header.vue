@@ -56,41 +56,49 @@ export default {
         margin-left: 120px;
         top: 12px;
     }
+    ul{
+        margin-right: 50px;
+    }
 
-    router-link {
-        font-family: Poppins;
+    li {
+        font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
         line-height: 21px;
         color: #F26132;
+        cursor: pointer;
+        /* margin-right: 50px; */
+        /* padding: 7px 15px */
         /* margin-right: 25px; */
     }
 
-    ul li:nth-child(2) {
+    li:nth-child(2) {
         background: #F26132;
         margin: 0px 10px;
-        padding: 0px 15px
+        
     }
 
     #sign-up {
         color: #FDFDFD;
+        padding: 7px 30px;
     }
 
-    router-link:last-child {
+    li:last-child {
         background: #FFFFFF;
         border: 1px solid #F26132;
         box-sizing: border-box;
-        padding: 0px 15px;
+        /* padding: 7px 19px; */
     }
 
-    router-link:nth-last-child(3){
+    /* li:nth-last-child(3){
         color: #F26132;
-     }
+     } */
 
-    #sign-in{
+    #sign-in, #worker{
          color: #F26132;
-         cursor: pointer;
+         text-align: center;
+         padding: 7px 30px
          /* font-size: 18px; */
      }
 

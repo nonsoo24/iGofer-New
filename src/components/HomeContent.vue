@@ -6,7 +6,7 @@
             <p class="word pb-3">Choose from a pool of iGofer trained and verified professionals to <br> get your job
                 done.
             </p>
-            <button class="btn px-5 rounded">Hire a Worker</button>
+            <button class="btn px-5 rounded" @click="hire">Hire a Worker</button>
         </div>
         </section>
 
@@ -211,12 +211,20 @@
 </template>
 
 <script>
-import Footer from './Shared/Footer.vue'
+import Footer from './Shared/Footer.vue';
+// import Hire from './Hire.vue'
 export default {
 
   components: {
     'app-footer': Footer
-  }
+  },
+
+    methods: {
+        hire(){
+           this.$router.push({ path: 'Hire' })
+        }
+    }
+
 }
 </script>
 

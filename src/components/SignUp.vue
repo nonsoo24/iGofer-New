@@ -21,10 +21,14 @@
                                 aria-describedby="emailHelp">
                         </div>
 
-                        <div class="form-group">
-                            <label for="phone-number">Phone Number</label>
-                            <input type="number" class="form-control form-control-sm" id="phone-number">
-                        </div>
+                              <label for="phone-number">Phone Number</label>
+                            <div class="input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">+234</span>
+                                </div>
+                                <input type="number" class="form-control form-control-sm" id="phone-number">
+                            </div>
+
 
                         <div class="form-group">
                             <label for="password">Password</label>

@@ -4,39 +4,70 @@
         <h5 class="text-center">Hire a worker</h5>
         <p class="text-center">Tell us about your work and we will match you with the best and nearest worker.</p>
         <form action="">
-            <p>What type of work do you need done? </p>
-            <div class="row work-type-div">
+            <h6 class="pb-5">What type of work do you need done? </h6>
+            <div class="row work-type-div container">
+                <div class="col-md-6 d-flex flex-column">
+                    <div class="radio">
+                        <input type="radio" class="form-radio" checked="checked" id="carpentry">
+                        <label for="carpentry">Carpentry</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" class="form-radio" id="painting">
+                        <label for="painting">Painting and Interior design</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" class="form-radio" id="plumbing">
+                        <label for="plumbing">Plumbing</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" class="form-radio" id="roofing">
+                        <label for="roofing">Roofing Repairs</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" class="form-radio" id="bricklaying">
+                        <label for="bricklaying">Bricklaying</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" class="form-radio" id="tiling">
+                        <label for="tiling">Tiling</label>
+                    </div>
+
+                    </div>
                 <div class="col-md-6">
-                    <input type="radio" name="work-type" id="">Carpentry
-                    <input type="radio" name="work-type" id="">Painting and Interior design
-                    <input type="radio" name="work-type" id="">Plumbing
-                    <input type="radio" name="work-type" id="">roofing Repairs
-                    <input type="radio" name="work-type" id="">Bricklaying
-                    <input type="radio" name="work-type" id="">Tiling
-                </div>
-                <div class="col-md-6">
-                    <ul>
-                        <li> <input type="radio" name="work-type" id="cleaning">
+                <div>
+                    <input type="radio" class="form-radio" id="cleaning">
                     <label for="cleaning">General Cleaning</label>
-                    </li>
+                </div>
 
-                    <li>
-                    <input type="radio" name="work-type" id="electrical">
-                    <label for="electrical">Electrical Services</label>
-                    </li>
+                    <div>
+                        <input type="radio" class="form-radio" id="electrical">
+                        <label for="electrical">Electrical Services</label>
+                    </div>
 
-                    <li>
-                    <input type="radio" name="work-type" id="security">
-                    <label for="security">Security Systems</label>
-                    </li>
-                    
-                    <input type="radio" name="work-type" id="catering">
-                    <label for="catering">Food and Catering</label>
-                    <input type="radio" name="work-type" id="academic">
-                    <label for="academic">Academic Services</label>
-                    <input type="radio" name="work-type" id="evironmental">
-                    <label for="evironmental">Environmental</label>
-                    </ul>
+                    <div>
+                        <input type="radio" class="form-radio" id="security">
+                        <label for="security">Security Systems</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" class="form-radio" id="catering">
+                        <label for="catering">Food and Catering</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="academic">
+                        <label for="academic">Academic Services</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" class="form-radio" id="evironmental">
+                        <label for="evironmental">Environmental</label>
+                    </div>
                 </div>
             </div>
             <button class="btn">Next</button>
@@ -62,10 +93,8 @@ export default {
         margin-top: 100px;
     }
 
-    input {
-        display: block;
-        text-align: left
-    }
+
+
 
     form {
         border: 1px solid #BEBEBE;
@@ -73,13 +102,17 @@ export default {
         margin: 50px auto
     }
 
-    h5,h5+p, button {
+    h5,
+    h5+p,
+    h6,
+    button {
         font-family: "Poppins", "sans-serif";
         font-style: normal;
         color: #333333;
     }
 
-    h5 {
+    h5,
+    h6 {
         font-weight: 600;
         font-size: 25px;
     }
@@ -101,13 +134,34 @@ export default {
         font-size: 15px;
         font-weight: 600;
     }
-  ul li{
-  color: #AAAAAA;
-  display: block;
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 100px;
-	border-bottom: 1px solid #333;
+    /* input[type=radio]:checked ::before{
+        background: #F26132;
+
+    } */
+    input[type="radio"]:checked + label{
+        color: #F26132;
+
+    }
+
+    /* checkbox */
+ input[type="radio"] {
+  position: absolute;
+  /* opacity: 0; */
+  cursor: pointer;
+  left: 170px;
+  margin-top: 4px;
+  height: 15px;
+  width: 15px;
 }
+
+
+/* On mouse-over, add a grey background color */
+input[type="radio"]:hover {
+  background-color: #ccc;
+}
+
+input[type="radio"]:checked {
+  background-color: #2196F3;
+}
+
 </style>

@@ -18,7 +18,7 @@
                         <h5>Contact Us</h5>
                         <p>Norman Williams Street<br>off Awolowo Road, Ikoyi.</p>
                         <p><i class="fa fa-phone"></i> +234-8168847243 </p>
-                        <p><i class="far fa-envelope"></i> hello@igofer.com.ng </p>
+                        <p><i class="far fa-envelope"></i> hello@igofier.com.ng </p>
                     </div>
 
                       <div class="col-md-3">

@@ -38,6 +38,12 @@
     </div>
 </template>
 
+<script>
+export default {
+    
+}
+</script>
+
 <style scoped>
 footer{
     background: linear-gradient(88.78deg, #F26132 37.93%, #E8190C 91.92%);

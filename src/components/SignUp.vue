@@ -22,7 +22,7 @@
                         </div>
 
                               <label for="phone-number">Phone Number</label>
-                            <div class="input-group-sm">
+                            <div class="input-group-sm d-flex">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">+234</span>
                                 </div>

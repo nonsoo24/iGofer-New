@@ -2,58 +2,86 @@
     <div signin-page>
         <section>
             <div class="row">
-                <div class="col-md-6 write-up">
+                <div class="col-md-5 write-up">
                     <h3>A convienent and affordable way to <br> get things done.</h3>
-                    <p class="choose-igofer">Choose from a pool of iGofer trained and verified professionals to <br> get your job done </p>
+                    <p class="choose-igofer">Choose from a pool of iGofer trained and verified professionals to <br> get
+                        your job done </p>
                 </div>
-                <div class="col-md-4 signin-details">
+                <div class="col-md-5 signin-details">
                     <h5>Create a free account</h5>
                     <p>Welcome, let's get your account set up</p>
-                    <form>
-                    <div class="form-group">
-                            <label for="full-name" :class="{invalid: $v.email.$error}">Full name</label>
+                    <form @submit.prevent="submit">
+                        <div class="form-group" :class="{'invalid': $v.userData.name.$error}">
+                            <label for="full-name">Full name</label>
                             <input type="text" class="form-control form-control-sm" id="full-name"
-                                aria-describedby="fullnameHelp"
-                                v-model="userData.fullname">
-                        </div>
-                        <div class="form-group" :class="{invalid: $v.email.$error}">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control form-control-sm"
-                             id="email"
-                            aria-describedby="emailHelp"
-                            @blur="$v.email.$touch()"
-                            v-model="userData.email">
-                            <p v-if="!$v.email.email" class="text-danger text-left pl-4">Please enter a valid email</p>
-                            <p v-if="!$v.email.required" class="text-danger text-left pl-4">This field is required</p>
+                                aria-describedby="fullnameHelp" v-model.trim="$v.userData.name.$model">
+                            <div class="error" v-if="!$v.userData.name.required">Field is required</div>
+                            <div class="error" v-if="!$v.userData.name.minLength">Name must have at least
+                                {{$v.userData.name.$params.minLength.min}} letters.</div>
                         </div>
 
-                              <label for="phone-number">Phone Number</label>
-                            <div class="input-group-sm d-flex">
+                        <div class="form-group" :class="{'invalid': $v.userData.email.$error}">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control form-control-sm" id="email"
+                                aria-describedby="emailHelp"
+                                v-model.trim="$v.userData.email.$model">
+                            <div class="error" v-if="!$v.userData.email.required">Field is required</div>
+                            <div class="error" v-if="!$v.userData.email.email">Please enter a valid E-mail address</div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-2 mt-2 p-0 text-right">
+                                    <span class="bg-dark p-2">+234</span>
+                                </div>
+                                <div class="col p-0 text-right">
+                                    <input type="text" class="form-control form-control-sm m-0">
+                                </div>
+                            </div>
+                            <!-- <label for="phone-number">Phone Number</label>
+                            <div class="input-group-sm">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">+234</span>
                                 </div>
                                 <input type="number" class="form-control form-control-sm" id="phone-number"
-                                v-model="userData.phoneNumber">
-                            </div>
+                                    v-model="userData.phoneNumber">
+                            </div> -->
+                        </div>
 
-
-                        <div class="form-group">
+                        <div class="form-group" :class="{'invalid': $v.userData.password.$error}">
                             <label for="password">Password</label>
                             <input type="password" class="form-control form-control-sm" id="password"
-                            v-model="userData.password">
+                            v-model.trim="$v.userData.password.$model">
+                            <div class="error" v-if="!$v.userData.password.required">Field is required</div>
+                            <div class="error" v-if="!$v.userData.password.minLength">
+                                Password should be up to {{$v.userData.password.$params.minLength.min}} Characters</div>
                         </div>
-                        <div class="form-group">
+
+                        <div class="form-group" :class="{'invalid': $v.userData.confirmPassword.$error}">
                             <label for="confirm-password">Confirm Password</label>
                             <input type="password" class="form-control form-control-sm" id="confirm-password"
-                            v-model="userData.confirmPassword">
+                            v-model="$v.userData.confirmPassword.$model">
+                             <div class="error" v-if="!$v.userData.confirmPassword.required">Field is required</div>
+                            <div class="error" v-if="!$v.userData.confirmPassword.sameAsPassword">
+                                Passwords must be identical</div>
                         </div>
+
+                        <!-- put a tick box showing you agree to our terms and condtitions -->
+
                         <!-- <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div> -->
-                        <button type="submit" class="btn btn-primary mb-3" @click.prevent="createAccount()">Create Account</button>
+                        <button type="submit" class="btn btn-primary mb-3" :disabled="submitStatus === 'PENDING'">Create
+                            Account</button>
+                            <div class="error" v-if="submitStatus === 'OK'">Thanks for your submission!</div>
+                            <div class="error" v-if="submitStatus === 'ERROR'">Please fill the form correctly.</div>
+                            <div class="error" v-if="submitStatus === 'PENDING'">Sending...</div>
+
+                             <!-- <button type="submit" class="btn btn-primary mb-3">Create
+                            Account</button> -->
                         <p>Already have an account? <span>Log in</span></P>
-                        <p>By signing up  you agree to our<span> Terms of Service</span></p>
+                        <p>By signing up you agree to our<span> Terms of Service</span></p>
                     </form>
                 </div>
             </div>
@@ -62,45 +90,100 @@
 </template>
 
 <script>
-import {required, email} from 'vuelidate/lib/validators'
+import {required, minLength, email, sameAs} from 'vuelidate/lib/validators'
+//import axios from 'axios'
+//const touchMap = new WeakMap()
 export default {
+    //name:   'formValidation',
     data() {
         return {
             userData: {
-                fullname: '',
+                name: '',
                 email: '',
                 phoneNumber: '',
                 password: '',
                 confirmPassword: '',
-                accountCreated: false
-
+                // termsAndCondition: false,
+                submitStatus: null
+                // accountCreated: false
             }
-
         }
     },
-
-    validations: {
+validations: {
+    userData: {
         email: {
             required,
             email
         },
-        fullname: {
+
+        name: {
+            required,
+            minLength: minLength(3)
+        },
+        phoneNumber: {
             required
         },
-         phoneNumber: {
-            required
+        password: {
+            required,
+            minLength: minLength(8),
+            // rege(x){
+            //     let
+            // }
+        },
+        confirmPassword: {
+            required,
+            sameAsPassword: sameAs('password')
         }
+    }
 
-    },
+},
     methods: {
-        createAccount() {
-            this.accountCreated = true
 
+        // delayTouch($v) {
+        //     $v.$reset()
+        //     if (touchMap.has($v)) {
+        //         clearTimeout(touchMap.get($v))
+        //     }
+        //     touchMap.set($v, setTimeout($v.$touch, 1000))
+        // },
+        // onSubmit(){
+        //     userData = {Y
+        //         name: this.userData.name,
+        //         email: this.userData.email,
+        //         phoneNumber: this.userData.phoneNumber,
+        //         password: this.userData.password,
+        //         confirmPassword: this.userData.confirmPassword,
+                // termsAndCondition: false,
+                //submitStatus:
+                // accountCreated: false
+            //}
+            //console.log(formData)
+            //axios.post('/')
+
+
+        //},
+
+        submit() {
+            //console.log('submit!')
+            this.$v.$touch()
+            if (this.$v.$invalid) {
+                //alert('hello')
+                this.submitStatus = 'ERROR'
+            } else {
+                // do your submit logic here
+                //alert('hello')
+                this.submitStatus = 'PENDING'
+                this.onSubmit()
+                setTimeout(() => {
+                    this.submitStatus = 'OK'
+                }, 500)
+            }
+        }
         }
 
     }
 
-}
+
 </script>
 
 <style scoped>
@@ -215,7 +298,7 @@ form p {
     border: 1px solid red
 }
 
-/* .form-group.invalid label{
+.form-group.invalid label, .error{
    color: red;
-} */
+}
 </style>
